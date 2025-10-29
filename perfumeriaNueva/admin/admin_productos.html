@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Productos - Rose Passion</title>
+
+  <!-- CSS general -->
+  <link rel="stylesheet" href="../css/estilos2.css">
+
+  <!-- Scripts -->
+  <script src="../js/auth.js" defer></script>
+  <script src="../js/admin.js" defer></script>
+</head>
+
+<body>
+  <!-- ======= NAVBAR FIJO ======= -->
+  <nav class="nav-admin">
+  <div class="logo"> Rose Passion</div>
+  <div class="acciones-nav">
+    <button id="btnUsuarios" class="btn-nav">Usuarios</button>
+    <button id="logoutBtn" class="btn-salir">Cerrar sesión</button>
+  </div>
+</nav>
+
+
+  <!-- ======= CONTENEDOR CENTRAL ======= -->
+  <main class="contenedor-admin">
+    <h1>Gestión de Productos</h1>
+
+    <!-- Encabezado -->
+    <div class="fila-producto encabezado">
+      <div>Imagen</div>
+      <div>Nombre</div>
+      <div>Marca</div>
+      <div>Precio</div>
+      <div>Stock</div>
+      <div>Acciones</div>
+    </div>
+
+    <!-- Aquí se insertarán los productos dinámicamente -->
+    <div id="listaProductos"></div>
+
+    <!-- ======= FORMULARIO NUEVO PRODUCTO ======= -->
+    <form id="formNuevoProducto">
+      <input type="text" id="nombreProd" placeholder="Nombre" required>
+      <input type="text" id="marcaProd" placeholder="Marca" required>
+      <input type="number" id="precioProd" placeholder="Precio" required>
+      <input type="number" id="stockProd" placeholder="Stock" required>
+      <input type="text" id="imgProd" placeholder="URL de imagen">
+      <button type="submit" class="btn-agregar">Agregar producto</button>
+    </form>
+  </main>
+
+  <!-- ======= FOOTER FIJO ======= -->
+  <footer class="footer-admin">
+    <p>© 2025 Rose Passion | Panel de Productos</p>
+  </footer>
+</body>
+</html>

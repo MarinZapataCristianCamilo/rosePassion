@@ -1,0 +1,182 @@
+/* ======== NAVBAR Y FOOTER FIJOS ======== */
+.nav-admin {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.footer-admin {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* ======== CONTENIDO ENTRE NAV Y FOOTER ======== */
+.contenedor-admin {
+  max-width: 1100px;
+  margin: 100px auto 80px auto; /* espacio para nav y footer */
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  min-height: calc(100vh - 180px);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* ======== BOTONES DE NAVEGACIÓN ADMIN ======== */
+.acciones-nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-nav, .btn-salir {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-nav:hover {
+  background-color: #444;
+}
+
+.btn-salir:hover {
+  background-color: #c0392b;
+}
+
+/* ======== BOTONES GENÉRICOS ======== */
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  margin: 2px;
+}
+
+.btn-editar { background-color: #4CAF50; }
+.btn-eliminar { background-color: #e74c3c; }
+.btn-agregar { background-color: #333; margin-top: 15px; }
+
+.btn:hover { opacity: 0.85; }
+
+/* ======== PRODUCTOS ======== */
+.fila-producto {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 200px;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.fila-producto.encabezado {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.imgProd {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* ======== PANEL DE USUARIOS ======== */
+.tabla-usuarios {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Encabezado */
+.fila.encabezado {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 200px;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 12px 15px;
+  text-align: center;
+}
+
+/* Filas dinámicas de usuarios */
+.fila-usuario {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr 200px;
+  align-items: center;
+  text-align: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.fila-usuario:hover {
+  background-color: #f9f9f9;
+}
+
+/* Imagen de usuario */
+.img-user {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
+/* ======== FORMULARIO NUEVO PRODUCTO ======== */
+#formNuevoProducto {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+#formNuevoProducto input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#formNuevoProducto button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ======== SCROLL ======== */
+body {
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+

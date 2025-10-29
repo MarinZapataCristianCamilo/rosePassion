@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro - Rose Passion</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <script defer src="js/auth.js"></script>
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-left">
+    <img src="img/ChatGPT Image 23 sept 2025, 10_12_28 p.m..png" alt="Logo Rose Passion" class="logo-img">
+    <h1 class="logo">Rose Passion</h1>
+  </div>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="login.html" id="loginBtn">Iniciar sesión</a>
+    <button id="logoutBtn" style="display:none;">Cerrar sesión</button>
+  </nav>
+</header>
+
+
+  <section class="formulario">
+    <h2>Crear Cuenta</h2>
+    <form id="registroForm">
+      <input type="text" id="nuevoUsuario" placeholder="Usuario" required>
+      <input type="password" id="nuevaContraseña" placeholder="Contraseña" required>
+      <button type="submit">Registrar</button>
+      <p id="mensajeRegistro"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Rose Passion</p>
+  </footer>
+</body>
+</html>
