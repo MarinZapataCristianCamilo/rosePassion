@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Usuarios - Rose Passion</title>
+
+  <!-- Estilos generales -->
+  <link rel="stylesheet" href="../css/estilos2.css">
+
+  <!-- Script de autenticación (verifica si el usuario es admin) -->
+  <script src="../js/auth.js" defer></script>
+
+  <!-- Script de control administrativo -->
+  <script src="../js/admin.js" defer></script>
+</head>
+
+<body>
+  <!-- ======= NAVBAR NEGRA ======= -->
+  <nav class="nav-admin">
+  <div class="logo"> Rose Passion</div>
+  <div class="acciones-nav">
+    <button id="btnProductos" class="btn-nav">Productos</button>
+    <button id="logoutBtn" class="btn-salir">Cerrar sesión</button>
+  </div>
+</nav>
+
+
+  <!-- ======= SECCIÓN PRINCIPAL DEL PANEL DE USUARIOS ======= -->
+  <main class="contenedor-admin">
+    <h1>Gestión de Usuarios</h1>
+
+    <!-- Contenedor de la tabla -->
+    <section class="tabla-usuarios">
+
+      <!-- Encabezado de columnas -->
+      <div class="fila encabezado">
+        <div>Imagen</div>
+        <div>Usuario</div>
+        <div>Contraseña</div>
+        <div>Nuevo Nombre</div>
+        <div>Nueva Contraseña</div>
+        <div>Acción</div>
+      </div>
+
+      <!-- Aquí se generarán dinámicamente los usuarios -->
+      <div id="listaUsuarios"></div>
+
+    </section>
+  </main>
+
+  <!-- ======= FOOTER NEGRO ======= -->
+  <footer class="footer-admin">
+    <p>© 2025 Rose Passion | Panel Administrativo</p>
+  </footer>
+</body>
+</html>
