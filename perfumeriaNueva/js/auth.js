@@ -1,30 +1,24 @@
-// LOGIN
-document.getElementById('loginForm')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const user = document.getElementById('usuario').value;
-  const pass = document.getElementById('contraseña').value;
+// =============================
+// VERIFICAR SESIÓN DE ADMINISTRADOR
+// =============================
+document.addEventListener("DOMContentLoaded", () => {
+  const usuarioActivo = localStorage.getItem("usuarioActivo");
 
-  const storedUser = localStorage.getItem('user_' + user);
-  if (storedUser && storedUser === pass) {
-    localStorage.setItem('usuario', user);
-    document.getElementById('mensajeLogin').textContent = 'Inicio exitoso ✅';
-    setTimeout(() => window.location.href = 'index.html', 1000);
-  } else {
-    document.getElementById('mensajeLogin').textContent = 'Usuario o contraseña incorrectos ❌';
+  // Solo permitir acceso al usuario admin
+  if (usuarioActivo !== "admin") {
+    alert("Acceso restringido. Solo el administrador puede entrar aquí.");
+    window.location.href = "../index.html";
+    return;
   }
-});
 
-// REGISTRO
-document.getElementById('registroForm')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const user = document.getElementById('nuevoUsuario').value;
-  const pass = document.getElementById('nuevaContraseña').value;
-
-  if (localStorage.getItem('user_' + user)) {
-    document.getElementById('mensajeRegistro').textContent = 'El usuario ya existe';
-  } else {
-    localStorage.setItem('user_' + user, pass);
-    document.getElementById('mensajeRegistro').textContent = 'Cuenta creada ✅';
+  // Botón para cerrar sesión
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("usuarioActivo");
+      alert("Sesión cerrada correctamente.");
+      window.location.href = "../index.html";
+    });
   }
 });
 

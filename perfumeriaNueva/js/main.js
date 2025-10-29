@@ -107,4 +107,8 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "index.html";
     });
   }
+  if (!localStorage.getItem("user_admin")) {
+  localStorage.setItem("user_admin", "567");
+}
+
 });
